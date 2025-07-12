@@ -1,0 +1,40 @@
+/* 样式：Purple Navbar + Capsule Buttons */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f7f7f7;
+}
+
+.navbar {
+  background-color: #5A189A;  /* 紫色栏 */
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 24px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-logo {
+  display: flex;
+  align-items: center;
+  font-size: 20px;
+  font-weight: bold;
+  color: white;
+}
+
+.navbar-links a {
+  display: inline-block;
+  background-color: #7B2CBF;
+  color: white;
+  padding: 8px 16px;
+  border-radius: 20px;  /* 胶囊形状 */
+  text-decoration: none;
+  margin-left: 12px;
+  font-size: 14px;
+  transition: background-color 0.3s ease;
+}
+
+.navbar-links a:hover {
+  background-color: #9D4EDD;
+}
