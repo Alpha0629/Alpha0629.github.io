@@ -251,50 +251,69 @@
     font-size: 16px;
   }
 
- /* Hover-triggered Sidebar CSS */
-.sidebar {
-  position: fixed;
-  left: -210px; /* Only show 20px when collapsed */
-  top: 80px;
-  width: 200px;
-  height: calc(100vh - 80px);
-  background-color: #f8f4ff;
-  padding: 20px;
-  box-shadow: 2px 0 5px rgba(0,0,0,0.1);
-  z-index: 900;
-  overflow-y: auto;
-  transition: left 0.3s ease;
-  border-right: 1px solid #e0d0f0;
-}
-
-.sidebar:hover {
-  left: 0;
-}
-
-.sidebar-content {
-  padding: 10px;
-  opacity: 0;
-  transition: opacity 0.2s ease 0.1s;
-}
-
-.sidebar:hover .sidebar-content {
-  opacity: 1;
-}
-
-.sidebar::before {
-  content: '≡';
-  position: absolute;
-  right: 5px;
-  top: 10px;
-  color: #5a189a;
-  font-size: 20px;
-}
-
-@media (max-width: 1024px) {
+ /* Left Sidebar TOC Styles */
   .sidebar {
-    display: none;
+    position: fixed;
+    left: -210px;
+    top: 80px;
+    width: 200px;
+    height: calc(100vh - 80px);
+    background-color: #f8f4ff;
+    padding: 20px;
+    box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+    z-index: 900;
+    overflow-y: auto;
+    transition: left 0.3s ease;
+    border-right: 1px solid #e0d0f0;
   }
-}
+
+  .sidebar:hover {
+    left: 0;
+  }
+
+  .sidebar-content {
+    padding: 10px;
+    opacity: 0;
+    transition: opacity 0.2s ease 0.1s;
+  }
+
+  .sidebar:hover .sidebar-content {
+    opacity: 1;
+  }
+
+  .sidebar::before {
+    content: '≡';
+    position: absolute;
+    right: 5px;
+    top: 10px;
+    color: #5a189a;
+    font-size: 20px;
+  }
+
+  .toc-list {
+    list-style: none;
+    padding-left: 0;
+  }
+
+  .toc-list li {
+    margin-bottom: 8px;
+  }
+
+  .toc-list a {
+    color: #333;
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+
+  .toc-list a:hover {
+    color: #5a189a;
+  }
+
+  @media (max-width: 1024px) {
+    .sidebar {
+      display: none;
+    }
+  }
 
 /* 修改后的Logo显示样式 */
   .main-logo {
@@ -364,7 +383,7 @@
   <div class="summary-section">
     <h2>Key Insights and Overview</h2>
     
-    <h3>🔍 Model Diversity</h3>
+    <h3>Model Diversity</h3>
     <p>Awesome_OL provides a comprehensive collection of models covering various aspects of online learning:</p>
     <ul>
       <li><strong>5 advanced OAL strategies</strong> with cognitive and submodular approaches</li>
@@ -373,7 +392,7 @@
       <li><strong>7 baseline methods</strong> for performance comparison</li>
     </ul>
     
-    <h3>🌟 Feature Highlights</h3>
+    <h3>Feature Highlights</h3>
     <p>The toolkit excels in several key areas:</p>
     <ul>
       <li><strong>Drift Adaptation:</strong> 12/17 methods include drift adaptation capabilities</li>
@@ -382,7 +401,7 @@
       <li><strong>Imbalanced Learning:</strong> Specialized methods like ROALE-DI and OLI2DS</li>
     </ul>
     
-    <h3>📈 Performance Considerations</h3>
+    <h3>Performance Considerations</h3>
     <p>When selecting a method, consider:</p>
     <ul>
       <li><strong>For concept drift:</strong> IWDA, ARF, and DES show strong performance</li>
@@ -398,12 +417,12 @@
   <table>
     <thead>
       <tr>
-        <th>🧩 Strategy</th>
-        <th>📝 Description</th>
-        <th>📚 Reference</th>
-        <th>💾 Code</th>
-        <th>📅 Year</th>
-        <th>🏛️ Journal/Conference</th>
+        <th>Strategy</th>
+        <th>Description</th>
+        <th>Reference</th>
+        <th>Code</th>
+        <th>ear</th>
+        <th>Journal/Conference</th>
       </tr>
     </thead>
     <tbody>
@@ -446,12 +465,12 @@
   <table>
     <thead>
       <tr>
-        <th>🧩 Strategy</th>
-        <th>📝 Description</th>
-        <th>📚 Reference</th>
-        <th>💾 Code</th>
-        <th>📅 Year</th>
-        <th>🏛️ Journal/Conference</th>
+        <th>Strategy</th>
+        <th>Description</th>
+        <th>Reference</th>
+        <th>Code</th>
+        <th>Year</th>
+        <th>Journal/Conference</th>
       </tr>
     </thead>
     <tbody>
@@ -486,12 +505,12 @@
   <table>
     <thead>
       <tr>
-        <th>🤖 Classifier</th>
-        <th>📝 Description</th>
-        <th>📚 Reference</th>
-        <th>💾 Source</th>
-        <th>📅 Year</th>
-        <th>🏛️ Journal/Conference</th>
+        <th>Classifier</th>
+        <th>Description</th>
+        <th>Reference</th>
+        <th>Source</th>
+        <th>Year</th>
+        <th>Journal/Conference</th>
       </tr>
     </thead>
     <tbody>
@@ -518,12 +537,12 @@
   <table>
     <thead>
       <tr>
-        <th>🤖 Classifier</th>
-        <th>📝 Description</th>
-        <th>📚 Reference</th>
-        <th>💾 Source</th>
-        <th>📅 Year</th>
-        <th>🏛️ Journal/Conference</th>
+        <th>Classifier</th>
+        <th>Description</th>
+        <th>Reference</th>
+        <th>Source</th>
+        <th>Year</th>
+        <th>Journal/Conference</th>
       </tr>
     </thead>
     <tbody>
@@ -550,11 +569,11 @@
   <table>
     <thead>
       <tr>
-        <th>🤖 Classifier</th>
-        <th>📝 Description</th>
-        <th>📚 Reference</th>
-        <th>📅 Year</th>
-        <th>🏛️ Journal/Conference</th>
+        <th>Classifier</th>
+        <th>Description</th>
+        <th>Reference</th>
+        <th>Year</th>
+        <th>Journal/Conference</th>
       </tr>
     </thead>
     <tbody>
@@ -572,12 +591,12 @@
   <table>
     <thead>
       <tr>
-        <th>🤖 Classifier</th>
-        <th>📝 Description</th>
-        <th>📚 Reference</th>
-        <th>💾 Source</th>
-        <th>📅 Year</th>
-        <th>🏛️ Journal/Conference</th>
+        <th>Classifier</th>
+        <th>Description</th>
+        <th>Reference</th>
+        <th>Source</th>
+        <th>Year</th>
+        <th>Journal/Conference</th>
       </tr>
     </thead>
     <tbody>
@@ -652,12 +671,12 @@
   <table>
     <thead>
       <tr>
-        <th>🤖 Classifier</th>
-        <th>📝 Description</th>
-        <th>📚 Reference</th>
-        <th>💾 Source</th>
-        <th>📅 Year</th>
-        <th>🏛️ Journal/Conference</th>
+        <th>Classifier</th>
+        <th>Description</th>
+        <th>Reference</th>
+        <th>Source</th>
+        <th>Year</th>
+        <th>Journal/Conference</th>
       </tr>
     </thead>
     <tbody>
@@ -676,13 +695,13 @@
   <table>
     <thead>
       <tr>
-        <th>🔹 Method</th>
-        <th>🧠 OAL Strategy</th>
-        <th>🤖 Classifier</th>
-        <th>⚪ Binary</th>
-        <th>🟢 Multi-class</th>
-        <th>🔄 Drift Adaptation</th>
-        <th>🧩 Ensemble</th>
+        <th>Method</th>
+        <th>OAL Strategy</th>
+        <th>Classifier</th>
+        <th>Binary</th>
+        <th>Multi-class</th>
+        <th>Drift Adaptation</th>
+        <th>Ensemble</th>
       </tr>
     </thead>
     <tbody>
