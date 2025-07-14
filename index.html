@@ -118,18 +118,7 @@
     border-radius: 8px;
     box-shadow: 0 4px 12px rgba(0,0,0,0.1);
   }
-  @media(max-width: 600px) {
-    main h1 {
-      font-size: 2rem;
-    }
-    main p.subtitle {
-      font-size: 1.1rem;
-    }
-    .module {
-      width: 100%;
-    }
-  }
-
+  
   .university-section {
     width: 100%;
     max-width: 1000px;
@@ -159,23 +148,105 @@
     transform: scale(1.05);
   }
 
+  /* 底部灰色部分样式 */
+  .footer {
+    background-color: #333;
+    color: white;
+    padding: 40px 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  
+  .footer-logo {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-right: 50px;
+  }
+  
+  .logo-text {
+    font-size: 20px;
+    margin-top: 10px;
+    color: white;
+  }
+  
+  .footer-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 50px;
+  }
+  
+  .link-column {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .link-column a {
+    color: #ccc;
+    text-decoration: none;
+    margin-bottom: 10px;
+    font-size: 14px;
+  }
+  
+  .link-column a:hover {
+    color: white;
+  }
+  
+  .footer-bottom {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid #444;
+    font-size: 12px;
+    color: #aaa;
+  }
+  
+  .back-to-top {
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
   @media(max-width: 600px) {
+    main h1 {
+      font-size: 2rem;
+    }
+    main p.subtitle {
+      font-size: 1.1rem;
+    }
+    .module {
+      width: 100%;
+    }
     .university-logos {
       gap: 30px;
     }
     .university-logos img {
       width: 150px;
     }
-  } 
+    .footer {
+      flex-direction: column;
+    }
+    
+    .footer-links {
+      margin-top: 30px;
+      gap: 30px;
+    }
+  }
 </style>
 </head>
 <body>
 
 <nav>
-  <a href="#installation">Installation</a>
-  <a href="#documentation">Documentation</a>
-  <a href="#user-guide">User Guide</a>
-  <a href="#community">Community</a>
+  <a href="installation.html">Installation</a>
+  <a href="models.html">Models</a>
+  <a href="user guide.html">User Guide</a>
+  <a href="community.html">Community</a>
   <a href="about.html">About</a>
   <a href="#news">News</a>
 </nav>
@@ -188,43 +259,65 @@
   
   <div class="modules-container">
     <div class="module">
-      <h2>INCREMENTAL LEARNING</h2>
-      <p>Stream learning models are created incrementally and are updated continuously. They are suitable for big data applications where real-time response is vital.</p>
+      <h2>ONLINE ACTIVE LEARNING</h2>
+      <p>Comprehensive toolkit featuring state-of-the-art OAL strategies like CogDQS, DSA-AI and MTSGQS, designed for dynamic data streams with human-like cognition.</p>
     </div>
     
     <div class="module">
-      <h2>ADAPTIVE LEARNING</h2>
-      <p>Changes in data distribution harm learning. Adaptive methods are specifically designed to be robust to concept drift changes in dynamic environments.</p>
+      <h2>DRIFT ADAPTATION</h2>
+      <p>Advanced classifiers including ROALE-DI and OLI2DS specifically designed to handle concept drift in imbalanced and evolving data streams.</p>
     </div>
     
     <div class="module">
-      <h2>RESOURCE-WISE EFFICIENT</h2>
-      <p>Streaming techniques efficiently handle resources such as memory and processing time given the unbounded nature of data streams.</p>
+      <h2>SEMI-SUPERVISED LEARNING</h2>
+      <p>Specialized OSSL classifiers like OSSBLS and ISSBLS that effectively utilize unlabeled data in streaming environments.</p>
     </div>
     
     <div class="module">
-      <h2>EASY TO USE</h2>
-      <p>scikit-multiflow is designed for users with any experience level. Experiments are easy to design, setup, and run. Existing methods are easy to modify and extend.</p>
+      <h2>ENSEMBLE METHODS</h2>
+      <p>Powerful ensemble techniques including ARF and DES that combine multiple learners for robust performance in dynamic conditions.</p>
     </div>
     
     <div class="module">
-      <h2>STREAM LEARNING TOOLS</h2>
-      <p>In its current state, scikit-multiflow contains data generators, multi-output/multi-target stream learning methods, change detection methods, evaluation methods, and more.</p>
+      <h2>VISUALIZATION TOOLS</h2>
+      <p>Interactive visualization capabilities including dynamic GIFs and confusion matrices for intuitive performance comparison.</p>
     </div>
     
     <div class="module">
-      <h2>OPEN SOURCE</h2>
-      <p>Distributed under the BSD 3-Clause, scikit-multiflow is developed and maintained publicly on GitHub by an active, diverse and growing community.</p>
+      <h2>RESEARCH-ORIENTED</h2>
+      <p>Developed by THUFDD Research Group at Tsinghua University, with implementations of cutting-edge algorithms published in top-tier journals.</p>
     </div>
   </div>
 
   <div class="gif-container">
     <h2>Visualization: Comparison of Results from Multiple Models</h2>
-    <img src="https://github.com/Alpha0629/Alpha0629.github.io/raw/main/assests/Results_combined_Waveform_all_models.gif" 
+    <img src="https://github.com/Alpha0629/Alpha0629.github.io/raw/main/assets/Results_combined_Waveform_all_models.gif" 
          alt="Waveform Results Comparison GIF"
          onerror="this.onerror=null; this.src='https://placehold.co/800x400/5a189a/white?text=GIF+Not+Found';">
   </div>
 </main>
+
+<footer class="footer">
+  <div class="footer-logo">
+    <!-- 这里应该是彩色无限循环logo，实际使用时替换为图片 -->
+    <div style="width: 50px; height: 50px; background: linear-gradient(45deg, #ff3366, #ff9933, #33cc33, #3399ff, #cc33ff); border-radius: 50%;"></div>
+    <div class="logo-text">Awesome_OL</div>
+  </div>
+  
+  <div class="footer-links">
+    <div class="link-column">
+      <a href="installation.html">Installation</a>
+      <a href="models.html">Models</a>
+      <a href="user guide.html">User Guide</a>
+      <a href="community.html">Community</a>
+      <a href="about.html">About</a>
+    </div>
+  </div>
+  
+  <div class="footer-bottom">
+    <div>© 2024 Awesome_OL. Developed by THUFDD Research Group.</div>
+  </div>
+</footer>
 
 </body>
 </html>

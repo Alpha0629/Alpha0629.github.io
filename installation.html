@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>About Awesome_OL</title>
+<title>Download & Setup - Awesome_OL</title>
 <style>
   body {
     margin: 0; 
@@ -37,112 +37,89 @@
     color: #5a189a;
   }
 
-  main {
-    flex-grow: 1;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 120px 20px 80px;
+  /* 主内容区域样式 */
+  .main-container {
+    margin-top: 80px;
+    padding: 40px;
     max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .download-header {
+    text-align: center;
+    margin-bottom: 40px;
+  }
+
+  .download-header h1 {
+    font-size: 2.5rem;
+    color: #5a189a;
+    margin-bottom: 15px;
+  }
+
+  .download-header p {
+    font-size: 1.1rem;
+    color: #555;
+    max-width: 700px;
     margin: 0 auto;
   }
 
-  .about-header {
-    text-align: center;
-    margin-bottom: 50px;
-  }
-
-  .about-header h1 {
-    font-size: 2.5rem;
-    color: #5a189a;
-    margin-bottom: 20px;
-  }
-
-  .about-content {
-    width: 100%;
-    line-height: 1.8;
-  }
-
-  .note-section {
-    background-color: #f9f9f9;
+  .setup-section {
+    background: #fff;
     padding: 30px;
-    border-radius: 10px;
-    margin-bottom: 40px;
-    border-left: 4px solid #5a189a;
-  }
-
-  .note-section p {
-    margin-bottom: 20px;
-  }
-
-  .note-section em {
-    font-style: italic;
-    color: #555;
-  }
-
-  .team-section {
-    width: 100%;
-    margin-bottom: 40px;
-  }
-
-  .team-section h2 {
-    color: #5a189a;
-    margin-bottom: 20px;
-    text-align: center;
-  }
-
-  .team-members {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 30px;
-  }
-
-  .member-card {
-    background: white;
     border-radius: 8px;
-    padding: 20px;
-    width: 250px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    transition: transform 0.3s;
+    box-shadow: 0 2px 15px rgba(0,0,0,0.05);
+    margin-bottom: 40px;
   }
 
-  .member-card:hover {
-    transform: translateY(-5px);
-  }
-
-  .member-card h3 {
-    color: #5a189a;
+  .setup-section h2 {
+    font-size: 1.8rem;
+    color: #333;
     margin-top: 0;
-    margin-bottom: 10px;
+    margin-bottom: 25px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #eee;
+    display: flex;
+    align-items: center;
   }
 
-  .member-card p {
-    margin: 5px 0;
-    color: #555;
+  .setup-section h2 .emoji {
+    margin-right: 10px;
   }
 
-  .university-logo {
-    text-align: center;
-    margin: 70px 0;
+  .setup-section ol {
+    padding-left: 25px;
   }
 
-  .university-logo img {
-    max-width: 400px;  /* 放大校徽LOGO */
-    width: 100%;
-    height: auto;
-    transition: transform 0.3s ease;
+  .setup-section li {
+    margin-bottom: 20px;
+    line-height: 1.6;
+    font-size: 1.05rem;
   }
 
-  .university-logo img:hover {
-    transform: scale(1.05);
+  .setup-section strong {
+    color: #333;
   }
 
-  /* 响应式设计 */
-  @media (max-width: 768px) {
-    .university-logo img {
-      max-width: 300px;  /* 在小屏幕上适当调整大小 */
-    }
+  .code-block {
+    background: #f5f5f5;
+    border-radius: 6px;
+    padding: 15px;
+    font-family: 'Courier New', Courier, monospace;
+    margin: 15px 0;
+    overflow-x: auto;
+  }
+
+  .note-box {
+    background: #f8f4ff;
+    border-left: 4px solid #5a189a;
+    padding: 15px 20px;
+    margin: 20px 0;
+    border-radius: 0 6px 6px 0;
+  }
+
+  .note-box strong {
+    color: #5a189a;
   }
 
   /* 新增的返回按钮样式 */
@@ -177,6 +154,25 @@
   .home-icon {
     font-size: 24px;
     font-weight: bold;
+  }
+
+  @media (max-width: 768px) {
+    .main-container {
+      padding: 20px;
+      margin-top: 70px;
+    }
+    
+    .download-header h1 {
+      font-size: 2rem;
+    }
+    
+    .setup-section {
+      padding: 20px;
+    }
+    
+    .setup-section h2 {
+      font-size: 1.5rem;
+    }
   }
 
   /* 修改后的Logo显示样式 */
@@ -274,7 +270,7 @@
 <body>
 
 <nav>
-  <a href="installation.html ">Installation</a>
+  <a href="index.html">Installation</a>
   <a href="models.html">Models</a>
   <a href="user guide.html">User Guide</a>
   <a href="community.html">Community</a>
@@ -282,76 +278,74 @@
   <a href="index.html#news">News</a>
 </nav>
 
-<main>
+<div class="main-container">
   <div class="main-logo">
     <img src="https://raw.githubusercontent.com/liuzy0708/liuzy0708.github.io/main/assets/img/SL.png" alt="Awesome_OL Main Logo" />
   </div>
 
-  <div class="about-header">
-    <h1>About Awesome_OL</h1>
-    <p>A General Toolkit for Online Learning Approaches</p>
+  <div class="download-header">
+    <h1>Awesome_OL Setup Guide</h1>
+    <p>Follow this step-by-step guide to set up your development environment and start using Awesome_OL for your online learning projects.</p>
   </div>
-  
-  <div class="about-content">
-    <div class="note-section">
-      <h2>📝 Note</h2>
-      <p>We sincerely hope this toolkit becomes a valuable resource in your journey with online learning. Our dedicated team at the <strong>THUFDD Research Group</strong>, led by <strong>Prof. Xiao He</strong> and <strong>Prof. Donghua Zhou</strong> from the Department of Automation at Tsinghua University, is committed to driving innovation and excellence in machine learning applications for industry.</p>
-    </div>
-    
-    <div class="team-section">
-      <h2>Project Contributors</h2>
-      <div class="team-members">
-        <div class="member-card">
-          <h3>Zeyi Liu</h3>
-          <p>Lead Developer</p>
-          <p>liuzy21@mails.tsinghua.edu.cn</p>
-        </div>
-        
-        <div class="member-card">
-          <h3>Songqiao Hu</h3>
-          <p>Core Developer</p>
-          <p>hsq23@mails.tsinghua.edu.cn</p>
-        </div>
-        
-        <div class="member-card">
-          <h3>Pengyu Han</h3>
-          <p>Core Developer</p>
-          <p>hpy24@mails.tsinghua.edu.cn</p>
-        </div>
-        
-        <div class="member-card">
-          <h3>Jiaming Liu</h3>
-          <p>Core Developer</p>
-          <p>23371007@buaa.edu.cn</p>
-        </div>
-      </div>
-    </div>
-    
-    <div class="university-logo">
-      <img src="https://raw.githubusercontent.com/Alpha0629/Alpha0629.github.io/main/assets/logo.svg" alt="Awesome_OL Logo" />
-    </div>
 
-    <!-- 在团队介绍部分之后添加以下内容 -->
-<div class="references-section" style="width: 100%; margin-bottom: 40px;">
-  <h2 style="color: #5a189a; margin-bottom: 20px; text-align: center;">📚 References</h2>
-  <div style="background-color: #f9f9f9; padding: 30px; border-radius: 10px; border-left: 4px solid #5a189a;">
-    <p style="margin-bottom: 15px; font-weight: 500;">Explore related resources and inspiration at:</p>
-    <ul style="margin-left: 20px; line-height: 1.8;">
-      <li style="margin-bottom: 10px;">
-        <a href="https://github.com/scikit-multiflow/scikit-multiflow" 
-           style="color: #5a189a; text-decoration: none; transition: color 0.3s;"
-           onmouseover="this.style.color='#7b2cbf'" 
-           onmouseout="this.style.color='#5a189a'">
-          GitHub - scikit-multiflow
-        </a>
+  <section class="setup-section">
+    <h2><span class="emoji">🔧</span> Environment Setup</h2>
+    
+    <p>Follow these steps to complete the environment setup (using VSCode as an example):</p>
+    
+    <ol>
+      <li>
+        <strong>Open Anaconda Prompt or Terminal</strong><br>
+        Start by opening your command line interface.
       </li>
-    </ul>
-  </div>
+      
+      <li>
+        <strong>Navigate to the directory</strong> containing the <code>env.yml</code> file<br>
+        Use the <code>cd</code> command to change to the appropriate directory.
+      </li>
+      
+      <li>
+        <strong>Create the Conda environment</strong> by running:
+        <div class="code-block">
+          conda env create -f env.yml
+        </div>
+        This will install all required dependencies.
+      </li>
+      
+      <li>
+        <strong>Activate the Conda environment</strong><br>
+        Open the integrated terminal in VSCode (<code>Terminal</code> > <code>New Terminal</code>) and execute:
+        <div class="code-block">
+          conda activate OL
+        </div>
+      </li>
+      
+      <li>
+        <strong>Select Python Interpreter in VSCode</strong>
+        <ul>
+          <li>Press <code>Ctrl + Shift + P</code> (Windows/Linux) or <code>Cmd + Shift + P</code> (Mac) to open the Command Palette</li>
+          <li>Type and select <strong>Python: Select Interpreter</strong></li>
+          <li>Choose the interpreter corresponding to the activated Conda environment (<code>OL</code>)</li>
+        </ul>
+      </li>
+      
+      <li>
+        <strong>Run your Python code</strong><br>
+        Open your Python files and run them as usual. The activated environment will provide all required packages and dependencies.
+      </li>
+    </ol>
+    
+    <div class="note-box">
+      <strong>Note:</strong> If you encounter any issues during setup, please check our <a href="community.html">Community</a> page for support options or consult the troubleshooting section in our documentation.
+    </div>
+  </section>
+  
+  <section class="setup-section">
+    <div class="note-box">
+      <strong>Pro Tip:</strong> We recommend creating a fresh Conda environment for each project to avoid dependency conflicts.
+    </div>
+  </section>
 </div>
-    
-    
-  </div>
-</main>
 
 <!-- 新增的返回按钮 -->
 <div class="home-button" onclick="window.location.href='index.html'">
